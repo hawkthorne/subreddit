@@ -1,0 +1,95 @@
+@-moz-keyframes raiseHeader {
+    0% { -moz-transform: translateY(0); }
+    100% { -moz-transform: translateY(-360px); }
+}
+@-webkit-keyframes raiseHeader {
+    0% { -webkit-transform: translateY(0); }
+    100% { -webkit-transform: translateY(-360px); }
+}
+@keyframes raiseHeader {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-360px); }
+}
+
+@-moz-keyframes sparkle {
+    from      { background-position: 0px 0px; }
+    to        { background-position: -192px 0px; }
+}
+@-webkit-keyframes sparkle {
+    from      { background-position: 0px 0px; }
+    to        { background-position: -192px 0px; }
+}
+@keyframes sparkle {
+    from      { background-position: 0px 0px; }
+    to        { background-position: -192px 0px; }
+}
+
+#header span.redditname {
+    text-indent: -9999px;
+    position: absolute;
+    top: 400px;
+    display: block;
+    width: 685px;
+    margin: 0 50%;
+    left: -340px;
+
+    -moz-transform: translateY(-360px);
+    -webkit-transform: translateY(-360px);
+    transform: translateY(-360px);
+
+    -moz-animation-name: raiseHeader;
+    -moz-animation-iteration-count: 1;
+    -moz-animation-timing-function: ease-in-out;
+    -moz-animation-duration: 2.5s;
+
+    -webkit-animation-name: raiseHeader;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 2.5s;
+
+    animation-name: raiseHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2.5s;
+}
+
+#header span.redditname a {
+    display: block;
+    position: absolute;
+    color: transparent;
+    width: 685px;
+    height: 336px;
+    background: url(%%logo%%) no-repeat;
+}
+
+#header span.redditname a:after,
+#header span.redditname a:before {
+    content: "";
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(%%cornelius-sparkle%%) no-repeat;
+
+    -moz-animation: sparkle 1.5s steps(4) infinite;
+    -webkit-animation: sparkle 1.5s steps(4) infinite;
+    animation: sparkle 1.5s steps(4) infinite;
+
+    -moz-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+#header span.redditname a:after {
+    left: 70px;
+    top: 180px;
+}
+
+#header span.redditname a:before {
+    left: 535px;
+    top: 90px;
+
+    -moz-animation-delay: 0.75s;
+    -webkit-animation-delay: 0.75s;
+    animation-delay: 0.75s;
+}

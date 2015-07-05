@@ -1,0 +1,60 @@
+@-moz-keyframes jumping-jeff-move {
+    0% { -moz-transform: translateY(-70px); }
+    20% { -moz-transform: translateY(0px); }
+    80% { -moz-transform: translateY(0px); }
+    100% { -moz-transform: translateY(-70px); }
+}
+@-webkit-keyframes jumping-jeff-move {
+    0% { -webkit-transform: translateY(-70px); }
+    20% { -webkit-transform: translateY(0px); }
+    80% { -webkit-transform: translateY(0px); }
+    100% { -webkit-transform: translateY(-70px); }
+}
+@keyframes jumping-jeff-move {
+    0% { transform: translateY(-70px); }
+    20% { transform: translateY(0px); }
+    80% { transform: translateY(0px); }
+    100% { transform: translateY(-70px); }
+}
+
+@-moz-keyframes jumping-jeff-frame {
+    0% { background-position: 0px 0px; }
+    50% { background-position: 0px -48px; }
+    85% { background-position: 0px 0px; }
+    100% { background-position: 0px 0px; }
+}
+@-webkit-keyframes jumping-jeff-frame {
+    0% { background-position: 0px 0px; }
+    50% { background-position: 0px -48px; }
+    85% { background-position: 0px 0px; }
+    100% { background-position: 0px 0px; }
+}
+@keyframes jumping-jeff-frame {
+    0% { background-position: 0px 0px; }
+    50% { background-position: 0px -48px; }
+    85% { background-position: 0px 0px; }
+    100% { background-position: 0px 0px; }
+}
+
+.side:before {
+    content: "";
+    position: absolute;
+    margin: -65px 0;
+    display: block;
+    width: 48px;
+    height: 48px;
+    background: url(%%jumping-jeff%%) no-repeat;
+
+    -moz-animation: jumping-jeff-move 1.5s infinite, jumping-jeff-frame 1.5s 0.5s steps(1) infinite;
+    -webkit-animation: jumping-jeff-move 1.5s infinite, jumping-jeff-frame 1.5s 0.5s steps(1) infinite;
+    animation: jumping-jeff-move 1.5s infinite, jumping-jeff-frame 1.5s 0.5s steps(1) infinite;
+}
+
+.side .spacer:nth-child(1)::before {
+    content: "Orange button is jump";
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic;
+    display: block;
+    margin-bottom: 30px;
+}
